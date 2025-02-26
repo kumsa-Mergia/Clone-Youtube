@@ -52,9 +52,9 @@ Replace `your_api_key_here` with your actual YouTube API key.
 ## 📁 Project Structure
 ```
 📂 src
- ┣ 📂 components    # Reusable UI components
- ┣ 📂 pages         # Main pages (Home, Video, etc.)
- ┣ 📂 utils         # Helper functions
+ ┣ 📂 assets        # Image
+ ┣ 📂 Components    # Reusable UI components
+ ┣ 📂 Pages         # Main pages (Home, Video, etc.)
  ┣ 📜 main.jsx      # Root entry file
  ┣ 📜 App.jsx       # Main app component
 ```
