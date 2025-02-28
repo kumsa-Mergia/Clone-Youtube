@@ -22,96 +22,105 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import Image1 from "../../assets/img/Kana.jpg";
 import Image2 from "../../assets/img/MrBeast.jpg";
 
-const Sidebar = () => {
+const Sidebar = ({sidebar}) => {
   return (
     <>
-      <div className="p-5 bg-gray-100 font-sans text-1xl w-64 min-h-screen bg-white">
+      <div className="p-5 bg-gray-100 font-sans text-1xl w-54 min-h-screen bg-white"> 
+      
         {/* First  */}
         <div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <MdHome className="h-5 w-5 mr-3"/>
-            <p>Home</p>
+            <p  className={` ${sidebar?"":"hidden"}`}>Home</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <SiYoutubeshorts className="h-5 w-5 mr-3" />
-            <p>Shorts</p>
+            <p  className={` ${sidebar?"":"hidden"}`}>Shorts</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <MdOutlineSubscriptions className="h-5 w-5 mr-3" />
-            <p>Subscriptions</p>
+            <p  className={` ${sidebar?"":"hidden"}`}>Subscriptions</p>
           </div>
-          <hr />
+          <hr className="w-10"/>
         </div>
         {/* You */}
         <div>
-          <h3>You > </h3>
+          <h3 className="font-bold">You  </h3>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <FaHistory className="h-5 w-5 mr-3" />
-            <p>History</p>
+            <p  className={` ${sidebar?"":"hidden"}`}>History</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <MdOutlinePlaylistPlay className="h-5 w-5 mr-3" />
-            <p>Playlists</p>
+            <p  className={` ${sidebar?"":"hidden"}`}>Playlists</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <CiYoutube className="h-5 w-5 mr-3" />
-            <p>Your Videos</p>
+            <p  className={` ${sidebar?"":"hidden"}`}>Your Videos</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <MdOutlineWatchLater className="h-5 w-5 mr-3" />
-            <p>Watch later</p>
+            <p  className={` ${sidebar?"":"hidden"}`}>Watch later</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <BiLike className="h-5 w-5 mr-3" />
-            <p>Liked Videos</p>
+            <p  className={` ${sidebar?"":"hidden"}`}>Liked Videos</p>
           </div>
-          <hr />
+          <hr className="w-10"/>
         </div>
         {/* Subscription */}
         <div>
-          <h3>Subscriptions</h3>
+          <h3 className="font-bold">Subscriptions</h3>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
-            <img src={Image1} alt="" className="rounded-full h-8 w-8"/>
-            <p>MrBeast</p>
+            <img src={Image1} alt="" className="rounded-full h-5 w-5"/>
+            <p className={` ${sidebar?"":"hidden"}`}>Kana Television</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
-            <img src={Image2} alt="" className="rounded-full h-8 w-8"/>
-            <p>Kana Television</p>
+            <img src={Image2} alt="" className="rounded-full h-5 w-5"/>
+            <p className={` ${sidebar?"":"hidden"}`}>MrBeast</p>
           </div>
-          <h3><RiArrowDropDownLine /> Show more</h3>
-          <hr />
+          <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
+            <img src={Image2} alt="" className="rounded-full h-5 w-5"/>
+            <p className={` ${sidebar?"":"hidden"}`}>Abel Birhanu</p>
+          </div>
+          <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
+          <RiArrowDropDownLine /> 
+          <h3 className={` ${sidebar?"":"text-sm"}`}>Show more</h3>
+          </div>
+          <hr className="w-10"/>
+
         </div>
         {/* Explore */}
         <div>
-          <h3>Explore</h3>
+          <h3 className="font-bold">Explore</h3>
 
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <FaMusic className="h-5 w-5 mr-3" />
-            <p>Music</p>
+            <p className={` ${sidebar?"":"hidden"}`}>Music</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <MdOnlinePrediction className="h-5 w-5 mr-3" />
-            <p>Live</p>
+            <p className={` ${sidebar?"":"hidden"}`}>Live</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <SiYoutubegaming className="h-5 w-5 mr-3" />
-            <p>Gaming</p>
+            <p className={` ${sidebar?"":"hidden"}`}>Gaming</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <FaRegNewspaper className="h-5 w-5 mr-3" />
-            <p>News</p>
+            <p className={` ${sidebar?"":"hidden"}`}>News</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <GiTrophyCup className="h-5 w-5 mr-3" />
-            <p>Sports</p>
+            <p className={` ${sidebar?"":"hidden"}`}>Sports</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <BsLightbulb className="h-5 w-5 mr-3" />
-            <p>Learning</p>
+            <p className={` ${sidebar?"":"hidden"}`}>Learning</p>
           </div>
           <div className="flex items-center mb-2 p-2 rounded hover:bg-gray-200">
             <FaBasketShopping className="h-5 w-5 mr-3" />
-            <p>Fashion & Beauty</p>
+            <p className={` ${sidebar?"":"hidden"}`}>Fashion & Beauty</p>
           </div>
         </div>
       </div>
