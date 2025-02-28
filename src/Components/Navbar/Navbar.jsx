@@ -6,11 +6,11 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import youtubeLogo from "../../assets/Youtube-logo.jpg";
 import profile from "../../assets/kum-AI.jpg";
 
-const Navbar = () => {
+const Navbar = ({setSidebar}) => {
   return (
     <nav className="p-5 flex flex-wrap justify-between items-center">
       <div className="flex text-2xl items-center gap-2 font-bold mb-2 sm:mb-0"> {/* Adjusted margin for mobile */}
-        <MdOutlineMenu />
+        <MdOutlineMenu onClick={() => setSidebar(prev => prev === false?true:false)}/>
         <img className="h-5 w-7" src={youtubeLogo} alt="Youtube" />
         <h1 className="font-bold">YouTube</h1>
       </div>
