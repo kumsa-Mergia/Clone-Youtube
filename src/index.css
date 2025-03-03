@@ -6,3 +6,12 @@
 .smallsidebar p {
     display: none;
 } */
+
+/* .feed{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
+    
+} */
