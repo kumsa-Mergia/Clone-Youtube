@@ -1,9 +1,12 @@
 import React from "react";
+import Playvideo from "../../Components/PlayVideo/Playvideo";
 
 const VideoPage = () => {
   return (
     <>
-      <div>Test</div>
+      <div>
+        <Playvideo />
+      </div>
     </>
   );
 };
