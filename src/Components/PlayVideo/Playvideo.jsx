@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from 'react-router-dom'
 import { AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
 import { RiShareForwardLine, RiDownloadLine } from "react-icons/ri";
 import { HiDotsHorizontal } from "react-icons/hi";
@@ -10,6 +11,30 @@ import one from "../../assets/prof/1.jpg";
 import two from "../../assets/prof/2.jpg";
 import three from "../../assets/prof/3.jpg";
 import four from "../../assets/prof/4.jpg";
+
+// Video data 
+const VideoFeed = [
+  {
+    id: 1,
+    thumbnail: "../../assets/img/1.jpg",
+    vidTitle: "Introduction to Information Security",
+    ChanName: "Visit World",
+    views: "17K views",
+    when: "4 days ago",
+    videoSrc: "../../assets/video/INE.mp4",
+    description: "Learn essential concepts and best practices for Information Security.",
+  },
+  {
+    id: 2,
+    thumbnail: "../../assets/img/1.jpg",
+    vidTitle: "Cybersecurity Basics",
+    ChanName: "Tech Academy",
+    views: "10K views",
+    when: "1 week ago",
+    videoSrc: videoFile,
+    description: "Understand the fundamentals of cybersecurity and online safety.",
+  },
+];
 
 const Comment = ({ comment }) => {
   return (
@@ -40,7 +65,16 @@ const Comment = ({ comment }) => {
   );
 };
 
+
 const Playvideo = () => {
+  const { id } = useParams();
+  const video = VideoFeed.find((v) => v.id === parseInt(id, 10)) || null;
+
+
+  if (!video) {
+    return <h2 className="font-bold text-xl text-center p-16 ">Video not found</h2>;
+  }
+
   const comments = [
     {
       id: 1,
@@ -76,11 +110,12 @@ const Playvideo = () => {
     },
   ];
 
+  
   return (
     <div className="p-5 text-1xl">
       <div className="text">
-        <video
-          src={videoFile}
+      <video
+          src={video.videoSrc}
           controls
           autoPlay
           muted
