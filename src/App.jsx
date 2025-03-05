@@ -13,7 +13,7 @@ const App = () => {
       <Navbar setSidebar={setSidebar}/>
       <Routes>
         <Route path='/' element={<Home sidebar={sidebar} />} />
-        <Route path='/video/:categoryId/:videoId' element={<VideoPage />} />
+        <Route path='/video/:id/' element={<VideoPage />} />
 
       </Routes>
 
