@@ -9,33 +9,33 @@ import imgfour from "../../assets/feed/4.jpg"
 
 const VideoFeed = [
   {
+    id: 1,
     thumbnail: imgOne,
-    vidTitle:
-      "Introduction to Information Security",
+    vidTitle: "Introduction to Information Security",
     ChanName: "Visit World",
     views: "197K vies",
     when: "1 min ago",
   },
   {
+    id: 2,
     thumbnail: imgtwo,
-    vidTitle:
-      " Essential Concepts and Practices",
+    vidTitle: " Essential Concepts and Practices",
     ChanName: "Ku Teach",
     views: "7M vies",
     when: "4 years ago",
   },
   {
+    id: 3,
     thumbnail: imgthree,
-    vidTitle:
-      "Test of nothing",
+    vidTitle: "Test of nothing",
     ChanName: "World",
     views: "17K vies",
     when: "1 week ago",
   },
   {
+    id: 4,
     thumbnail: imgfour,
-    vidTitle:
-      "DevOps Essential Concepts and Practices",
+    vidTitle: "DevOps Essential Concepts and Practices",
     ChanName: "DevPol",
     views: "17K vies",
     when: "4 month ago",
@@ -47,8 +47,9 @@ const Feed = () => {
     <>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-7">
         {/* Card 1 */}
-        {VideoFeed.map((video, index) => (
-          <Link to={`video/20/25`}>
+        {VideoFeed.map((video) => (
+          // <Link to={`video/20/25`}>
+          <Link to={`video/${video.id}`} key={video.id} className="block">
             <img
               src={video.thumbnail}
               alt=""
